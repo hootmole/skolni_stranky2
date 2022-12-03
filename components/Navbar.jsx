@@ -42,7 +42,7 @@ export function Navbar() {
                         <li className=""><h2>Skola a LOLko</h2></li>
                         <li className=""><h2>Skola a LOLko</h2></li>
                         <li className=""><h2>Skola a LOLko</h2></li>
-                        <li className=""><h2>Skola a LOLko</h2></li>
+                        <li className=""><h2>nemam rad afroamericany</h2></li>
                     </ul>
                 </div>
                 <div className="absolute bottom-0 w-screen bg-slate-400 h-[10vw]">Telefoni cisla atd</div>
