@@ -1,0 +1,2 @@
+# skolni_stranky2
+ 
