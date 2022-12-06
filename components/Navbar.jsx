@@ -12,6 +12,50 @@ export function Navbar() {
         is_nav ? bodyEl.style.overflow = "auto" : bodyEl.style.overflow = "hidden";
     }
 
+    const [opt1, opt1_handle] = useState(false)
+    const [opt2, opt2_handle] = useState(false)
+    const [opt3, opt3_handle] = useState(false)
+    const [opt4, opt4_handle] = useState(false)
+    const [opt5, opt5_handle] = useState(false)
+
+    const opt1_toggle = () => {
+        opt1_handle(true)
+        opt2_handle(false)
+        opt3_handle(false)
+        opt4_handle(false)
+        opt5_handle(false)
+        console.log(opt1)
+    }
+    const opt2_toggle = () => {
+        opt1_handle(false)
+        opt2_handle(true)
+        opt3_handle(false)
+        opt4_handle(false)
+        opt5_handle(false)
+    }
+    const opt3_toggle = () => {
+        opt1_handle(false)
+        opt2_handle(false)
+        opt3_handle(true)
+        opt4_handle(false)
+        opt5_handle(false)
+    }
+    const opt4_toggle = () => {
+        opt1_handle(false)
+        opt2_handle(false)
+        opt3_handle(false)
+        opt4_handle(true)
+        opt5_handle(false)
+    }
+    const opt5_toggle = () => {
+        opt1_handle(false)
+        opt2_handle(false)
+        opt3_handle(false)
+        opt4_handle(false)
+        opt5_handle(true)
+    }
+
+
 
     return (
         <div className='fixed w-full h-20 z-[100] flex'>
@@ -36,16 +80,62 @@ export function Navbar() {
                     <h3 className="pl-5 text-2xl pb-1">Close</h3>
                 </div>
                 
-                <div className="flex w-[100%] h-[80%] items-center">
-                    <ul className="">
-                        <li className=""><h2>Skola a LOLko</h2></li>
-                        <li className=""><h2>Skola a LOLko</h2></li>
-                        <li className=""><h2>Skola a LOLko</h2></li>
-                        <li className=""><h2>Skola a LOLko</h2></li>
-                        <li className=""><h2>nemam rad afroamericany</h2></li>
-                    </ul>
+                <div className="flex w-[100%] h-[80%] items-center pt-24">
+                    <div className="pl-10">
+                        <ul className=" pb-10">
+                            <li className="flex flex-wrap">
+                                <h1 className="" onClick={opt1_toggle}>Moznost1</h1>
+                                <ul className={
+                                    opt1
+                                        ? " pl-10 ease-out duration-200 translate-x-10 opacity-100"
+                                        : " pl-10 ease-out duration-200 translate-x-1 opacity-0"
+                                }>
+                                    <li className=""><h2>Podmoznost1</h2></li>
+                                    <li className=""><h2>Podmoznost2</h2></li>
+                                    <li className=""><h2>Podmoznost3</h2></li>
+                                    <li className=""><h2>Podmoznost4</h2></li>
+                                    <li className=""><h2>Podmoznost5</h2></li>
+
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul className=" pb-10">
+                            <li className="flex flex-wrap">
+                                <h1 className="" onClick={opt2_toggle}>Moznost1</h1>
+                                <ul className={
+                                    opt2
+                                        ? " pl-10 ease-out duration-200 translate-x-10 opacity-100"
+                                        : " pl-10 ease-out duration-200 translate-x-1 opacity-0"
+                                }>
+                                    <li className=""><h2>Podmoznost1</h2></li>
+                                    <li className=""><h2>Podmoznost2</h2></li>
+                                    <li className=""><h2>Podmoznost3</h2></li>
+                                    <li className=""><h2>Podmoznost4</h2></li>
+                                    <li className=""><h2>Podmoznost5</h2></li>
+
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul className=" pb-10">
+                            <li className="flex flex-wrap">
+                                <h1 className="" onClick={opt3_toggle}>Moznost1</h1>
+                                <ul className={
+                                    opt3
+                                        ? " pl-10 ease-out duration-200 translate-x-10 opacity-100"
+                                        : " pl-10 ease-out duration-200 translate-x-1 opacity-0"
+                                }>
+                                    <li className=""><h2>Podmoznost1</h2></li>
+                                    <li className=""><h2>Podmoznost2</h2></li>
+                                    <li className=""><h2>Podmoznost3</h2></li>
+                                    <li className=""><h2>Podmoznost4</h2></li>
+                                    <li className=""><h2>Podmoznost5</h2></li>
+
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <div className="absolute bottom-0 w-screen bg-slate-400 h-[10vw]">Telefoni cisla atd</div>
+                <div className="absolute bottom-0 w-screen bg-slate-400 h-24">Telefoni cisla atd</div>
             </div>
 
         </div>
