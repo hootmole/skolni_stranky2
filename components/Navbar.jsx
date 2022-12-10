@@ -7,6 +7,7 @@ export function Navbar() {
     const [is_nav, set_nav] = useState(false)
 
     const nav_toggle = () => {
+        opt_reset()
         set_nav(!is_nav);
         const bodyEl = document.getElementsByTagName("body")[0];
         is_nav ? bodyEl.style.overflow = "auto" : bodyEl.style.overflow = "hidden";
@@ -18,13 +19,21 @@ export function Navbar() {
     const [opt4, opt4_handle] = useState(false)
     const [opt5, opt5_handle] = useState(false)
 
+    const opt_reset = () => {
+        opt1_handle(false)
+        opt2_handle(false)
+        opt3_handle(false)
+        opt4_handle(false)
+        opt5_handle(false)
+
+    }
+
     const opt1_toggle = () => {
         opt1_handle(true)
         opt2_handle(false)
         opt3_handle(false)
         opt4_handle(false)
         opt5_handle(false)
-        console.log(opt1)
     }
     const opt2_toggle = () => {
         opt1_handle(false)
